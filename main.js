@@ -93,4 +93,3 @@ document.getElementById("button").onclick = function () {
     document.getElementById("site").innerText = ("Wanna visit the original site?");
     document.getElementById("site").href = (list[x].site);
 }
-
