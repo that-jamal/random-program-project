@@ -63,7 +63,9 @@ function website() {
 // list of all the links and info of the programs
 const list = [
     { title: "Skeleathon", info: "A survival game where you kill enemies and build your skeleton army", url: "https://js13kgames.com/games/skeleathon/index.html", site: "https://js13kgames.com/entries/skeleathon" },
+
     { title: "ENDLESS DEATH", info: "You are on the verge of DEATH. Collect enough collection of life and get out of the RED WALLS", url: "https://js13kgames.com/games/endless-death/index.html", site: "https://js13kgames.com/entries/endless-death" },
+
     { title: "Aim lab from hell", info: "A knockoff of Aim Lab with a twist of Death.", url: "https://js13kgames.com/games/aim-lab-from-hell/index.html", site: "https://js13kgames.com/entries/aim-lab-from-hell" },
     { title: "Heart of the Gods", info: "In this game you take on the navy of the Underworld on the river Styx in your quest to destroy the very things that give the gods their power", url: "https://js13kgames.com/games/heart-of-the-gods/index.html", site: "https://js13kgames.com/entries/heart-of-the-gods" },
     { title: "Hang by a thread", info: "# How to Play Reach the goal. Collect hearts for extra points.", url: "https://js13kgames.com/games/hang-by-a-thread/index.html", site: "https://js13kgames.com/entries/hang-by-a-thread" },
@@ -97,3 +99,10 @@ document.getElementById("button").onclick = function () {
     document.getElementById("site").innerText = ("Wanna visit the original site?");
     document.getElementById("site").href = (list[x].site);
 }
+
+//like button
+/*
+<div id="like">1<img
+src="https://api.iconify.design/line-md:thumbs-up.svg?color=%23000000"
+width="20px">
+</div>*/

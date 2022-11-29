@@ -1,64 +1,127 @@
 html {
     overflow-x: hidden;
+    background-color: #000000;
 }
 
+/*github placement*/
 #github {
     background-color: #000000;
-    padding-right: 1%;
-    padding-bottom: 1%;
+    padding-right: 20px;
+    padding-bottom: 4px;
     display: flex;
     justify-content: flex-end;
+    width: 100vw;
+    height: 10vh;
 }
 
+/*h3 padding inside dropdown*/
+h3 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/*li padding inside dropdown*/
+li {
+    display: flex;
+
+    padding-left: 10px;
+    justify-content: space-evenly;
+
+}
+
+/* placement for info about the current displayed games*/
 #about {
     padding: 20px;
     font-size: 20px;
     text-align: center;
-    background-color: #000000;
+
     position: relative;
 }
 
-button {
+/*placement for next button on iframes*/
+#dropdown {
     display: flex;
     align-self: flex-end;
-    width: 300px;
     position: absolute;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-button:active {
+/* only the next button*/
+#button {
+    width: 160px;
+    font-size: 20px;
+    padding-right: 20px;
+    height: 50px;
+}
+
+/*dropdown button and next button*/
+button {
+    box-shadow: 0 40px 80px 0 rgba(0, 0, 0, 0.2), 0 60px 70px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*active button*/
+#dropdown:active {
     transition: all 0.1s ease;
-    transform: translateY(6px);
+    transform: translateY(5px);
 }
 
+/*removing scrollbar*/
 ::-webkit-scrollbar {
     width: 0px;
 }
 
+/* fonts colors and placement for iframes*/
 #center {
     font-size: 100px;
-    width: 100%;
+    width: 100vw;
     display: flex;
     border: 10px #800031;
     border-style: inset;
     background: radial-gradient(circle, rgba(185, 0, 0, 1) 0%, rgb(54, 54, 54) 100%);
     position: relative;
-    justify-content: flex-end;
+    justify-content: end;
 }
 
+/*iframes size and padding*/
 iframe {
     width: 100vw;
     height: 97vh;
     padding: 10px;
 }
 
+/*section 1 width*/
 .s1 {
     width: 100vw;
 }
 
+/*section 2 width and color*/
 .s2 {
     background-color: #000000;
     width: 100%;
     height: 20vh;
     color: aliceblue;
+}
+
+/*idk*/
+#like {
+    padding-right: 5px;
+    padding-left: 5px;
+    font-family: fantasy;
+}
+
+#likeButton {
+    display: flex;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background-color: #000000;
+    border-radius: 50%;
+    border-style: groove;
+
+}
+
+#likeButton:active {
+    transition: all 0.1s ease;
+    transform: scale(1.2);
+
 }
