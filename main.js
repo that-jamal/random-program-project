@@ -60,6 +60,7 @@ function website() {
 //{ title: "", info: "", url: "", site: "" },
 // list of all the links and info of the programs
 const list = [
+    { nah: 0 },
     { title: "Skeleathon", info: "A survival game where you kill enemies and build your skeleton army", url: "https://js13kgames.com/games/skeleathon/index.html", site: "https://js13kgames.com/entries/skeleathon" },
     { title: "ENDLESS DEATH", info: "You are on the verge of DEATH. Collect enough collection of life and get out of the RED WALLS", url: "https://js13kgames.com/games/endless-death/index.html", site: "https://js13kgames.com/entries/endless-death" },
     { title: "Aim lab from hell", info: "A knockoff of Aim Lab with a twist of Death.", url: "https://js13kgames.com/games/aim-lab-from-hell/index.html", site: "https://js13kgames.com/entries/aim-lab-from-hell" },
@@ -95,7 +96,8 @@ function srcChanger(item) {
     if (item) {
         x = item
     } else {
-        x = Math.floor(Math.random() * list.length);
+        x = Math.floor(Math.random() * 23 + 1);
+        console.log(x)
     }
 
     document.getElementById("likeButton").style.backgroundColor = "black"
@@ -124,7 +126,7 @@ function likeButton() {
 
 function linkback() {
     // Generate 24 li element
-    for (let i = 0; i < 23; i++) {
+    for (let i = 1; i < list.length; i++) {
         const li = document.createElement("li"); // <li></li>
         li.id = i;
         // i = number så at den vet vilken list title functionen använder
@@ -132,7 +134,7 @@ function linkback() {
         li.onclick = function () {
             srcChanger(i);
         };
-        // Add the button to the sectio
+        // Add the li to the ul
         document.querySelector("ul").appendChild(li);
 
 
