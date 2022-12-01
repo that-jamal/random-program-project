@@ -1,5 +1,3 @@
-
-
 /*
 function srcChanger() {
     document.getElementById("bild").src = "https://supermario-game.com/";
@@ -63,9 +61,7 @@ function website() {
 // list of all the links and info of the programs
 const list = [
     { title: "Skeleathon", info: "A survival game where you kill enemies and build your skeleton army", url: "https://js13kgames.com/games/skeleathon/index.html", site: "https://js13kgames.com/entries/skeleathon" },
-
     { title: "ENDLESS DEATH", info: "You are on the verge of DEATH. Collect enough collection of life and get out of the RED WALLS", url: "https://js13kgames.com/games/endless-death/index.html", site: "https://js13kgames.com/entries/endless-death" },
-
     { title: "Aim lab from hell", info: "A knockoff of Aim Lab with a twist of Death.", url: "https://js13kgames.com/games/aim-lab-from-hell/index.html", site: "https://js13kgames.com/entries/aim-lab-from-hell" },
     { title: "Heart of the Gods", info: "In this game you take on the navy of the Underworld on the river Styx in your quest to destroy the very things that give the gods their power", url: "https://js13kgames.com/games/heart-of-the-gods/index.html", site: "https://js13kgames.com/entries/heart-of-the-gods" },
     { title: "Hang by a thread", info: "# How to Play Reach the goal. Collect hearts for extra points.", url: "https://js13kgames.com/games/hang-by-a-thread/index.html", site: "https://js13kgames.com/entries/hang-by-a-thread" },
@@ -84,25 +80,66 @@ const list = [
     { title: "Audio Dash", info: "Ride the waveform of your music library while avoiding waves. Play the provided song or upload your own.", url: "https://js13kgames.com/games/audio-dash/index.html", site: "https://js13kgames.com/entries/audio-dash" },
     { title: "The_Coder's Game", info: "You are a square who has lost its family and you need to get the beacons online for your family to find you", url: "https://js13kgames.com/games/thecoders-game/index.html", site: "https://js13kgames.com/entries/thecoders-game" },
     { title: "WasteWorld", info: "Reclaim the wasteland! Only you and your friends can activate the World Filtration System by exploring and collecting resources!", url: "https://wasteworld.herokuapp.com/", site: "https://js13kgames.com/entries/wasteworld" },
-    { title: "Cooking for Skully", info: "Cooking for Skully is a cooking game where you have to prepare foods.", url: "https://cooking-for-skully.herokuapp.com/", site: "https://js13kgames.com/entries/cooking-for-skully" },
     { title: "Finn: the Little Collector", info: "Finn is a probationary grim reaper. He has a couple of souls to collect before the midnight. Reading the list carefully, he thought.", url: "https://js13kgames.com/games/finn-the-little-collector/index.html", site: "https://js13kgames.com/entries/finn-the-little-collector" },
     { title: "Dying Dreams", info: "You are having the same dream again... the dream where everyone must die...", url: "https://js13kgames.com/games/dying-dreams/index.html", site: "https://js13kgames.com/entries/dying-dreams" },
     { title: "Warp Station 13K", info: "A space roomba simulator and and exercise in procedural generation.", url: "https://js13kgames.com/games/warp-station-13k/index.html", site: "https://js13kgames.com/entries/warp-station-13k" },
 ]
 
+const colorLike = document.getElementById("likeButton");
+let x
+
+
+
 // takes a random list and place's it in inside the iframe
-document.getElementById("button").onclick = function () {
-    const x = Math.floor(Math.random() * list.length);
+function srcChanger(item) {
+    if (item) {
+        x = item
+    } else {
+        x = Math.floor(Math.random() * list.length);
+    }
+
+    document.getElementById("likeButton").style.backgroundColor = "black"
     document.getElementById("game").src = (list[x].url);
     document.getElementById("title").innerText = (list[x].title);
     document.getElementById("info").innerText = (list[x].info);
-    document.getElementById("site").innerText = ("Wanna visit the original site?");
+    document.getElementById("site").innerText = ("visit the original site for more information");
     document.getElementById("site").href = (list[x].site);
+    console.log(x)
+
+    if (list[x].like == true) {
+        colorLike.style.background = "green"
+    }
+}// changes the color of the like button
+
+function likeButton() {
+    if (list[x].like) {
+        colorLike.style.backgroundColor = "black"
+        list[x].like = false
+    } else {
+        colorLike.style.backgroundColor = "green"
+        list[x].like = true
+    }
+
 }
 
-//like button
-/*
-<div id="like">1<img
-src="https://api.iconify.design/line-md:thumbs-up.svg?color=%23000000"
-width="20px">
-</div>*/
+function linkback() {
+    // Generate 24 li element
+    for (let i = 0; i < 23; i++) {
+        const li = document.createElement("li"); // <li></li>
+        li.id = i;
+        // i = number så at den vet vilken list title functionen använder
+        li.innerText = (list[i].title)
+        li.onclick = function () {
+            srcChanger(i);
+        };
+        // Add the button to the sectio
+        document.querySelector("ul").appendChild(li);
+
+
+    }
+}
+
+
+
+srcChanger()
+linkback()
