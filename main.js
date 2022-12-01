@@ -1,63 +1,4 @@
-/*
-function srcChanger() {
-    document.getElementById("bild").src = "https://supermario-game.com/";
-}
-*/
 
-
-/*
-// circle through github
-function srcChanger() {
-    var next = document.getElementById("game");
-    if (next.src.match("https://chromedino.com/")) {
-        next.src = "https://that-jamal.github.io/calles-nantin/";
-    } else if (next.src.match("https://that-jamal.github.io/calles-nantin/")) {
-
-        next.src = "https://that-jamal.github.io/c-chat/";
-    } else if (next.src.match("https://that-jamal.github.io/c-chat/")) {
-
-        next.src = "https://that-jamal.github.io/frog-of-the-clicker/";
-    } else if (next.src.match("https://that-jamal.github.io/frog-of-the-clicker/")) {
-
-        next.src = "https://that-jamal.github.io/mini-reknarn/"
-    } else { //end src full
-        next.src = "https://chromedino.com/"
-    }
-}
-*/
-
-/*
-function website() {
-    let x;
-    var next = document.getElementById("game");
-    document.getElementById("button").onclick = function () {
-        x = Math.floor(Math.random() * 0) + 1;
-        console.log("button")
-    }
-
-    if (document.getElementById("button" == 1)) {
-        next.src = "https://that-jamal.github.io/calles-nantin/";
-    } else if (next.src.match("https://that-jamal.github.io/calles-nantin/")) {
-
-        next.src = "https://that-jamal.github.io/c-chat/";
-    } else if (next.src.match("https://that-jamal.github.io/c-chat/")) {
-
-        next.src = "https://that-jamal.github.io/frog-of-the-clicker/";
-    } else if (next.src.match("https://that-jamal.github.io/frog-of-the-clicker/")) {
-
-        next.src = "https://that-jamal.github.io/mini-reknarn/"
-    } else { //end src full
-        next.src = "https://chromedino.com/"
-    }
-}
-*/
-/*  { title: "calles-nantin", info: "calles app for something", url: "https://that-jamal.github.io/calles-nantin/" },
-    { title: "dino", info: "try and survive as long possible by jumping over obstacles", url: "https://chromedino.com/" },
-    { title: "calculator", info: "a calculator you can use for mathematics", url: "https://that-jamal.github.io/mini-reknarn/" },
-    { title: "c-Chat", info: "a chat oppen to anyone that gets in", url: "https://that-jamal.github.io/c-chat/" }*/
-
-
-//{ title: "", info: "", url: "", site: "" },
 // list of all the links and info of the programs
 const list = [
     { nah: 0 },
@@ -88,8 +29,6 @@ const list = [
 
 const colorLike = document.getElementById("likeButton");
 let x
-
-
 
 // takes a random list and place's it in inside the iframe
 function srcChanger(item) {
@@ -140,8 +79,6 @@ function linkback() {
 
     }
 }
-
-
 
 srcChanger()
 linkback()
