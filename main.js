@@ -38,12 +38,11 @@ const list = [
     { title: "Every Alien Loves 404", info: "A/S/D/W to move around. Hold SPACE then release to collect DNA samples or make tweets 404.", url: "https://js13kgames.com/games/every-alien-loves-404/index.html", site: "https://js13kgames.com/entries/every-alien-loves-404" },
     { title: "Can You Fix My Server?", info: "A simple casual game connecting the closest nodes.", url: "https://js13kgames.com/games/can-you-fix-my-server/index.html", site: "https://js13kgames.com/entries/can-you-fix-my-server" },
     { title: "FileNotFound", info: "I need your help - my computer seems to be broken. When I try to do anything I'm getting the FileNotFound error and everything glitches. Your task is to find the file that doesn't exist. Glitch effect intensifies when you are getting closer. Shorter directories names seems to be more corrupted ;)Look around for easter eggs.", url: "https://js13kgames.com/games/filenotfound/index.html", site: "https://js13kgames.com/entries/filenotfound" },
-    { title: "House Not Found", info: "A/D/ to move around, W to use an Action W/S to Move selection up and down.", url: "https://js13kgames.com/games/house-not-found/index.htmaaaaal", site: "https://js13kgames.com/entries/house-not-found" },
+    { title: "House Not Found", info: "A/D/ to move around, W to use an Action W/S to Move selection up and down.", url: "https://js13kgames.com/games/house-not-found/index.html", site: "https://js13kgames.com/entries/house-not-found" },
     { title: "textures 404", info: "We invite you for an adventure in the world of Nintendo DS, where in the fairytale kingdom of tropical chickens one day all textures were gone", url: "https://js13kgames.com/games/oh-no-all-the-textures-are-404/index.html", site: "https://js13kgames.com/entries/oh-no-all-the-textures-are-404" },
     { title: "I want to google the game", info: "In a world where the game cannot be found, you point your browser to the venerable search engine", url: "https://js13kgames.com/games/i-want-to-google-the-game/index.html", site: "https://js13kgames.com/entries/i-want-to-google-the-game" },
     { title: "Red Billion", info: "The recipe shattered. 404 Fragments. Recover the recipe", url: "https://js13kgames.com/games/red-billion/index.html", site: "https://js13kgames.com/entries/red-billion" },
 ]
-
 
 const colorLike = document.getElementById("likeButton");
 let random
@@ -63,7 +62,6 @@ function srcChanger(item) {
     document.getElementById("info").innerText = (list[random].info);
     document.getElementById("site").innerText = ("visit the original site for more information");
     document.getElementById("site").href = (list[random].site);
-    console.log(x)
 
     // checks if its likebutton active from before 
     if (list[random].like == true) {
