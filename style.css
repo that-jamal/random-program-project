@@ -3,6 +3,12 @@ html {
     background-color: #000000;
 }
 
+.dropdown-menu {
+    overflow: hidden;
+    overflow-y: scroll;
+    width: 200px;
+}
+
 /*github placement*/
 #github {
     background-color: #000000;
@@ -14,13 +20,6 @@ html {
     height: 10vh;
 }
 
-/*h3 padding inside dropdown*/
-h3 {
-    padding-left: 8px;
-    padding-right: 5px;
-    font-size: 20px;
-
-}
 
 /*li padding inside dropdown*/
 li {
@@ -53,6 +52,8 @@ li:hover {
     display: flex;
     align-self: flex-end;
     position: absolute;
+
+
 }
 
 /* only the next button*/

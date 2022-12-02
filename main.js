@@ -1,5 +1,6 @@
 
 // list of all the links and info of the programs
+// enter all information like this and add it to the list to give the program a program{ title: "", info: "", url: "", site: "" }  
 const list = [
     { nah: 0 },
     { title: "Skeleathon", info: "A survival game where you kill enemies and build your skeleton army", url: "https://js13kgames.com/games/skeleathon/index.html", site: "https://js13kgames.com/entries/skeleathon" },
@@ -25,7 +26,15 @@ const list = [
     { title: "Finn: the Little Collector", info: "Finn is a probationary grim reaper. He has a couple of souls to collect before the midnight. Reading the list carefully, he thought.", url: "https://js13kgames.com/games/finn-the-little-collector/index.html", site: "https://js13kgames.com/entries/finn-the-little-collector" },
     { title: "Dying Dreams", info: "You are having the same dream again... the dream where everyone must die...", url: "https://js13kgames.com/games/dying-dreams/index.html", site: "https://js13kgames.com/entries/dying-dreams" },
     { title: "Warp Station 13K", info: "A space roomba simulator and and exercise in procedural generation.", url: "https://js13kgames.com/games/warp-station-13k/index.html", site: "https://js13kgames.com/entries/warp-station-13k" },
+    { title: "Templo Mayor", info: "Reach the bottom of the temple to complete today's sacrifice.You can move left and right by pressing A/D and ←/→, or by tapping the sides of your screen on mobile.", url: "https://js13kgames.com/games/templo-mayor/index.html", site: "https://js13kgames.com/entries/templo-mayor" },
+    { title: "Stand By Me", info: "Only you and your chatty, adorable Defense Module Companion can protect the Central Core from creepy parasites trying to contaminate it.", url: "https://js13kgames.com/games/stand-by-me/index.html", site: "https://js13kgames.com/entries/stand-by-me" },
+    { title: "Skull Ocean", info: "experiment with this wave simulation and appreciate the graphics.", url: "https://js13kgames.com/games/skull-ocean/index.html", site: "https://js13kgames.com/entries/skull-ocean" },
+    { title: "The Space Between Us", info: "Our two blocks have been separated. You must bring them together again. Press the arrow keys to control the blue block. The red block will move in the opposite direction.", url: "https://js13kgames.com/games/the-space-between-us/index.html", site: "https://js13kgames.com/entries/the-space-between-us" },
+    { title: "Galaxy Rider", info: "Ride sick lines though the galactic bowl system adding to your star collection along the way. Try to finish each course as fast as you can!", url: "https://js13kgames.com/games/galaxy-rider/index.html", site: "https://js13kgames.com/entries/galaxy-rider" },
+    { title: "Cat Goric must escape!", info: "Choose your moves wisely. There are movement sensors in the chamber. So the more you move, the less space you have due to the proximity of the lasers.", url: "https://js13kgames.com/games/cat-goric-escape-from-the-warp-chamber/index.html", site: "https://js13kgames.com/entries/cat-goric-escape-from-the-warp-chamber" },
 ]
+
+//{ title: "", info: "", url: "", site: "" },
 
 const colorLike = document.getElementById("likeButton");
 let x
@@ -33,32 +42,32 @@ let x
 // takes a random list and place's it in inside the iframe
 function srcChanger(item) {
     if (item) {
-        x = item
+        random = item
     } else {
-        x = Math.floor(Math.random() * 23 + 1);
+        random = Math.floor(Math.random() * 29 + 1);
         console.log(x)
     }
 
     document.getElementById("likeButton").style.backgroundColor = "black"
-    document.getElementById("game").src = (list[x].url);
-    document.getElementById("title").innerText = (list[x].title);
-    document.getElementById("info").innerText = (list[x].info);
+    document.getElementById("game").src = (list[random].url);
+    document.getElementById("title").innerText = (list[random].title);
+    document.getElementById("info").innerText = (list[random].info);
     document.getElementById("site").innerText = ("visit the original site for more information");
-    document.getElementById("site").href = (list[x].site);
+    document.getElementById("site").href = (list[random].site);
     console.log(x)
 
-    if (list[x].like == true) {
+    if (list[random].like == true) {
         colorLike.style.background = "green"
     }
 }// changes the color of the like button
 
 function likeButton() {
-    if (list[x].like) {
+    if (list[random].like) {
         colorLike.style.backgroundColor = "black"
-        list[x].like = false
+        list[random].like = false
     } else {
         colorLike.style.backgroundColor = "green"
-        list[x].like = true
+        list[random].like = true
     }
 
 }
