@@ -6,6 +6,8 @@ html {
 .dropdown-menu {
     overflow: hidden;
     overflow-y: scroll;
+    max-height: 300px;
+
     width: 200px;
 }
 

@@ -1,6 +1,5 @@
-
 // list of all the links and info of the programs
-// enter all information like this and add it to the list to give the program a program{ title: "", info: "", url: "", site: "" }  
+// enter all information like this { title: "", info: "", url: "", site: "" } and add it to the list to give the program a other program 
 const list = [
     { nah: 0 },
     { title: "Skeleathon", info: "A survival game where you kill enemies and build your skeleton army", url: "https://js13kgames.com/games/skeleathon/index.html", site: "https://js13kgames.com/entries/skeleathon" },
@@ -32,6 +31,17 @@ const list = [
     { title: "The Space Between Us", info: "Our two blocks have been separated. You must bring them together again. Press the arrow keys to control the blue block. The red block will move in the opposite direction.", url: "https://js13kgames.com/games/the-space-between-us/index.html", site: "https://js13kgames.com/entries/the-space-between-us" },
     { title: "Galaxy Rider", info: "Ride sick lines though the galactic bowl system adding to your star collection along the way. Try to finish each course as fast as you can!", url: "https://js13kgames.com/games/galaxy-rider/index.html", site: "https://js13kgames.com/entries/galaxy-rider" },
     { title: "Cat Goric must escape!", info: "Choose your moves wisely. There are movement sensors in the chamber. So the more you move, the less space you have due to the proximity of the lasers.", url: "https://js13kgames.com/games/cat-goric-escape-from-the-warp-chamber/index.html", site: "https://js13kgames.com/entries/cat-goric-escape-from-the-warp-chamber" },
+    { title: "Tindeath", info: "Here you are a new guardian of death, protecting gates access! Your objective is simple: if a profile is valid he can enter heaven, if he lies to you send him to roast in hell!", url: "https://js13kgames.com/games/tindeath/index.html", site: "https://js13kgames.com/entries/tindeath" },
+    { title: "Soul Jumper", info: "Jump and spin through 10 levels, using your soul as a platform to help you over come spikes, gaps and falling blocks! Did not die in the right position? Rewind your steps to better align your soul!", url: "https://js13kgames.com/games/soul-jumper/index.html", site: "https://js13kgames.com/entries/soul-jumper" },
+    { title: "Delph", info: "A pretty blob simulation With zero game play", url: "https://js13kgames.com/games/delph/index.html", site: "https://js13kgames.com/entries/delph" },
+    { title: "Stolen Sword", info: "A sword used to suppress the evil force was stolen, releasing a lot of demons. Find the theft and beat the demons!, Drag to aim and release to jump and slash through enemies.", url: "https://js13kgames.com/games/stolen-sword/index.html", site: "https://js13kgames.com/entries/stolen-sword" },
+    { title: "Every Alien Loves 404", info: "A/S/D/W to move around. Hold SPACE then release to collect DNA samples or make tweets 404.", url: "https://js13kgames.com/games/every-alien-loves-404/index.html", site: "https://js13kgames.com/entries/every-alien-loves-404" },
+    { title: "Can You Fix My Server?", info: "A simple casual game connecting the closest nodes.", url: "https://js13kgames.com/games/can-you-fix-my-server/index.html", site: "https://js13kgames.com/entries/can-you-fix-my-server" },
+    { title: "FileNotFound", info: "I need your help - my computer seems to be broken. When I try to do anything I'm getting the FileNotFound error and everything glitches. Your task is to find the file that doesn't exist. Glitch effect intensifies when you are getting closer. Shorter directories names seems to be more corrupted ;)Look around for easter eggs.", url: "https://js13kgames.com/games/filenotfound/index.html", site: "https://js13kgames.com/entries/filenotfound" },
+    { title: "House Not Found", info: "A/D/ to move around, W to use an Action W/S to Move selection up and down.", url: "https://js13kgames.com/games/house-not-found/index.htmaaaaal", site: "https://js13kgames.com/entries/house-not-found" },
+    { title: "textures 404", info: "We invite you for an adventure in the world of Nintendo DS, where in the fairytale kingdom of tropical chickens one day all textures were gone", url: "https://js13kgames.com/games/oh-no-all-the-textures-are-404/index.html", site: "https://js13kgames.com/entries/oh-no-all-the-textures-are-404" },
+    { title: "I want to google the game", info: "In a world where the game cannot be found, you point your browser to the venerable search engine", url: "https://js13kgames.com/games/i-want-to-google-the-game/index.html", site: "https://js13kgames.com/entries/i-want-to-google-the-game" },
+    { title: "Red Billion", info: "The recipe shattered. 404 Fragments. Recover the recipe", url: "https://js13kgames.com/games/red-billion/index.html", site: "https://js13kgames.com/entries/red-billion" },
 ]
 
 //{ title: "", info: "", url: "", site: "" },
@@ -44,7 +54,7 @@ function srcChanger(item) {
     if (item) {
         random = item
     } else {
-        random = Math.floor(Math.random() * 29 + 1);
+        random = Math.floor(Math.random() * 40 + 1);
         console.log(x)
     }
 
