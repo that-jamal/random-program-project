@@ -44,10 +44,9 @@ const list = [
     { title: "Red Billion", info: "The recipe shattered. 404 Fragments. Recover the recipe", url: "https://js13kgames.com/games/red-billion/index.html", site: "https://js13kgames.com/entries/red-billion" },
 ]
 
-//{ title: "", info: "", url: "", site: "" },
 
 const colorLike = document.getElementById("likeButton");
-let x
+let random
 
 // takes a random list and place's it in inside the iframe
 function srcChanger(item) {
@@ -55,9 +54,9 @@ function srcChanger(item) {
         random = item
     } else {
         random = Math.floor(Math.random() * 40 + 1);
-        console.log(x)
     }
 
+    //adds the iformation from the list to program 
     document.getElementById("likeButton").style.backgroundColor = "black"
     document.getElementById("game").src = (list[random].url);
     document.getElementById("title").innerText = (list[random].title);
@@ -66,11 +65,13 @@ function srcChanger(item) {
     document.getElementById("site").href = (list[random].site);
     console.log(x)
 
+    // checks if its likebutton active from before 
     if (list[random].like == true) {
         colorLike.style.background = "green"
     }
-}// changes the color of the like button
+}
 
+// changes the color of the like button and checks if its liked from before 
 function likeButton() {
     if (list[random].like) {
         colorLike.style.backgroundColor = "black"
@@ -82,6 +83,7 @@ function likeButton() {
 
 }
 
+//adds all the list links so u can choose manually which games u want to be displayed  
 function linkback() {
     // Generate 24 li element
     for (let i = 1; i < list.length; i++) {
@@ -94,8 +96,6 @@ function linkback() {
         };
         // Add the li to the ul
         document.querySelector("ul").appendChild(li);
-
-
     }
 }
 

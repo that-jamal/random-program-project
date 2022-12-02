@@ -3,11 +3,11 @@ html {
     background-color: #000000;
 }
 
+/* gives width, height to the linklist and makes it able to be scrolled*/
 .dropdown-menu {
     overflow: hidden;
     overflow-y: scroll;
     max-height: 300px;
-
     width: 200px;
 }
 
@@ -21,7 +21,6 @@ html {
     width: 100vw;
     height: 10vh;
 }
-
 
 /*li padding inside dropdown*/
 li {
@@ -45,7 +44,6 @@ li:hover {
     padding: 20px;
     font-size: 20px;
     text-align: center;
-
     position: relative;
 }
 
@@ -54,8 +52,6 @@ li:hover {
     display: flex;
     align-self: flex-end;
     position: absolute;
-
-
 }
 
 /* only the next button*/
@@ -114,13 +110,6 @@ iframe {
     color: aliceblue;
 }
 
-/*idk*/
-#like {
-    padding-right: 5px;
-    padding-left: 5px;
-    font-family: fantasy;
-}
-
 /*the like button colors and siez*/
 #likeButton {
     display: flex;
@@ -131,9 +120,9 @@ iframe {
     background: black;
     border-radius: 50%;
     border-style: groove;
-
 }
 
+/* gives the pop effect to the like button when clicked*/
 #likeButton:active {
     transition: all 0.1s ease;
     transform: scale(1.2);
