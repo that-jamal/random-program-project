@@ -57,7 +57,7 @@ function srcChanger(item) {
     if (item) {
         random = item
     } else {
-        random = Math.floor(Math.random() * 39 + 1);
+        random = Math.floor(Math.random() * 40 + 1);
     }
 
     //adds the iformation from the list to program 

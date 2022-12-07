@@ -1,6 +1,5 @@
-/*hiddes scroll bar and makes the background black*/
+/* gives the background color*/
 html {
-    overflow-x: hidden;
     background-color: #000000;
 }
 
@@ -111,7 +110,7 @@ iframe {
     color: aliceblue;
 }
 
-/*the like button colors and siez*/
+/*the like button colors and size*/
 #likeButton {
     display: flex;
     position: absolute;
@@ -123,7 +122,7 @@ iframe {
     border-style: groove;
 }
 
-/* gives the pop effect to the like button when clicked*/
+/* gives a click effect to the like button when clicked*/
 #likeButton:active {
     transition: all 0.1s ease;
     transform: scale(1.2);
