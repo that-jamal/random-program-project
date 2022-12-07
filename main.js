@@ -1,5 +1,6 @@
 // list of all the links and info of the programs
-// enter all information like this { title: "", info: "", url: "", site: "" } and add it to the list to give the program a other program 
+
+// enter all information like this { title: "", info: "", url: "", site: "" } and add it to the list to add program to the list 
 const list = [
     { nah: 0 },
     { title: "Skeleathon", info: "A survival game where you kill enemies and build your skeleton army", url: "https://js13kgames.com/games/skeleathon/index.html", site: "https://js13kgames.com/entries/skeleathon" },
@@ -21,7 +22,6 @@ const list = [
     { title: "__OFF_THE_LINE__", info: "Fight to be the one who finally stays on the line! Use the arrows to attack and block your opponent.", url: "https://js13kgames.com/games/offtheline/index.html", site: "https://js13kgames.com/entries/offtheline" },
     { title: "Audio Dash", info: "Ride the waveform of your music library while avoiding waves. Play the provided song or upload your own.", url: "https://js13kgames.com/games/audio-dash/index.html", site: "https://js13kgames.com/entries/audio-dash" },
     { title: "The_Coder's Game", info: "You are a square who has lost its family and you need to get the beacons online for your family to find you", url: "https://js13kgames.com/games/thecoders-game/index.html", site: "https://js13kgames.com/entries/thecoders-game" },
-    { title: "WasteWorld", info: "Reclaim the wasteland! Only you and your friends can activate the World Filtration System by exploring and collecting resources!", url: "https://wasteworld.herokuapp.com/", site: "https://js13kgames.com/entries/wasteworld" },
     { title: "Finn: the Little Collector", info: "Finn is a probationary grim reaper. He has a couple of souls to collect before the midnight. Reading the list carefully, he thought.", url: "https://js13kgames.com/games/finn-the-little-collector/index.html", site: "https://js13kgames.com/entries/finn-the-little-collector" },
     { title: "Dying Dreams", info: "You are having the same dream again... the dream where everyone must die...", url: "https://js13kgames.com/games/dying-dreams/index.html", site: "https://js13kgames.com/entries/dying-dreams" },
     { title: "Warp Station 13K", info: "A space roomba simulator and and exercise in procedural generation.", url: "https://js13kgames.com/games/warp-station-13k/index.html", site: "https://js13kgames.com/entries/warp-station-13k" },
@@ -43,6 +43,10 @@ const list = [
     { title: "I want to google the game", info: "In a world where the game cannot be found, you point your browser to the venerable search engine", url: "https://js13kgames.com/games/i-want-to-google-the-game/index.html", site: "https://js13kgames.com/entries/i-want-to-google-the-game" },
     { title: "Red Billion", info: "The recipe shattered. 404 Fragments. Recover the recipe", url: "https://js13kgames.com/games/red-billion/index.html", site: "https://js13kgames.com/entries/red-billion" },
 ]
+// {site} gives the link to the original website 
+// {url} has the game link so the program can display it in iframes
+// {info} gives a bit inforamtion of the game
+// {title}the title of the game
 
 const colorLike = document.getElementById("likeButton");
 let random
@@ -52,7 +56,7 @@ function srcChanger(item) {
     if (item) {
         random = item
     } else {
-        random = Math.floor(Math.random() * 40 + 1);
+        random = Math.floor(Math.random() * 39 + 1);
     }
 
     //adds the iformation from the list to program 
