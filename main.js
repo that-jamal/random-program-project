@@ -3,6 +3,7 @@
 // enter all information like this { title: "", info: "", url: "", site: "" } and add it to the list to add program to the list 
 const list = [
     { nah: 0 },
+    { title: "Dante", info: "Play as Dante, catch all the lost evil souls and bring them for eternal punishment.", url: "https://js13kgames.com/games/dante/index.html", site: "https://js13kgames.com/entries/dante" },
     { title: "Skeleathon", info: "A survival game where you kill enemies and build your skeleton army", url: "https://js13kgames.com/games/skeleathon/index.html", site: "https://js13kgames.com/entries/skeleathon" },
     { title: "ENDLESS DEATH", info: "You are on the verge of DEATH. Collect enough collection of life and get out of the RED WALLS", url: "https://js13kgames.com/games/endless-death/index.html", site: "https://js13kgames.com/entries/endless-death" },
     { title: "Aim lab from hell", info: "A knockoff of Aim Lab with a twist of Death.", url: "https://js13kgames.com/games/aim-lab-from-hell/index.html", site: "https://js13kgames.com/entries/aim-lab-from-hell" },
