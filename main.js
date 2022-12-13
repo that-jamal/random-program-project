@@ -101,6 +101,5 @@ function linkback() {
         document.querySelector("ul").appendChild(li);
     }
 }
-
-srcChanger()
 linkback()
+srcChanger()
