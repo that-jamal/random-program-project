@@ -1,4 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&family=Roboto&family=Roboto+Slab:wght@300&display=swap');
+
 /* gives the background color*/
+.form-switch .form-check-input {
+    height: 25px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.form-switch .form-check-input:focus {
+    border-color: rgba(0, 0, 0, 0.25);
+    outline: 0;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(0,0,0,0.25)'/></svg>");
+}
+
+.form-switch .form-check-input:checked {
+    background-color: #3c0044;
+    border-color: #ffffff;
+    border: none;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>");
+}
+
 html {
     background-color: #000000;
 }
@@ -12,14 +34,29 @@ html {
 }
 
 /*github placement*/
-#github {
-    background-color: #000000;
+#switchgithub {
     padding-right: 20px;
+    padding-left: 20px;
     padding-bottom: 4px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: baseline;
     width: 100vw;
     height: 10vh;
+    background-color: #000000;
+}
+
+#github {
+    border-radius: 100%;
+}
+
+
+#github:hover {
+    transition: all 0.1s ease;
+    transform: scale(1.2);
+    background-color: #6a1492;
+    border-radius: 50%;
+    box-shadow: 0px 0px 7px 6px #6a1492;
 }
 
 /*li padding inside dropdown*/
@@ -29,14 +66,16 @@ li {
     padding-right: 1px;
     padding-left: 1px;
     justify-content: space-evenly;
-
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 /* gives a hover effect to all the li elements in the list*/
 li:hover {
     transition: all 0.1s ease;
     transform: scale(1.2);
-    background-color: #a54141;
+    background-color: #79096a;
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 /* placement for info about the current displayed games*/
@@ -45,6 +84,17 @@ li:hover {
     font-size: 20px;
     text-align: center;
     position: relative;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+#site {
+    text-decoration: none;
+    color: #cd41f8;
+
+}
+
+#site:hover {
+    text-shadow: 0 0 10px #d3a7e7;
 }
 
 /*placement for the Next button on iframes*/
@@ -60,11 +110,6 @@ li:hover {
     font-size: 20px;
     padding-right: 20px;
     height: 50px;
-}
-
-/*dropdown button and next button*/
-button {
-    box-shadow: 0 40px 80px 0 rgba(0, 0, 0, 0.2), 0 60px 70px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*active button*/
@@ -83,9 +128,9 @@ button {
     font-size: 100px;
     width: 100vw;
     display: flex;
-    border: 10px #800031;
+    border: 10px #6a1492;
     border-style: inset;
-    background: radial-gradient(circle, rgba(185, 0, 0, 1) 0%, rgb(54, 54, 54) 100%);
+    background: radial-gradient(circle, #8a2cc9 0%, #363636 100%);
     position: relative;
     justify-content: end;
 }
@@ -107,7 +152,7 @@ iframe {
     background-color: #000000;
     width: 100%;
     height: 20vh;
-    color: aliceblue;
+    color: #ffffff;
 }
 
 /*the like button colors and size*/

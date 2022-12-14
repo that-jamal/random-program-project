@@ -8,7 +8,7 @@ const list = [
     { title: "ENDLESS DEATH", info: "You are on the verge of DEATH. Collect enough collection of life and get out of the RED WALLS", url: "https://js13kgames.com/games/endless-death/index.html", site: "https://js13kgames.com/entries/endless-death" },
     { title: "Aim lab from hell", info: "A knockoff of Aim Lab with a twist of Death.", url: "https://js13kgames.com/games/aim-lab-from-hell/index.html", site: "https://js13kgames.com/entries/aim-lab-from-hell" },
     { title: "Heart of the Gods", info: "In this game you take on the navy of the Underworld on the river Styx in your quest to destroy the very things that give the gods their power", url: "https://js13kgames.com/games/heart-of-the-gods/index.html", site: "https://js13kgames.com/entries/heart-of-the-gods" },
-    { title: "Hang by a thread", info: "# How to Play Reach the goal. Collect hearts for extra points.", url: "https://js13kgames.com/games/hang-by-a-thread/index.html", site: "https://js13kgames.com/entries/hang-by-a-thread" },
+    { title: "Hang by a thread", info: "How to Play. Reach the goal and Collect hearts for extra points.", url: "https://js13kgames.com/games/hang-by-a-thread/index.html", site: "https://js13kgames.com/entries/hang-by-a-thread" },
     { title: "Spectral-Shooter", info: "Undeads don't actually die. They go into the spectral world, and respawn after some time.", url: "https://js13kgames.com/games/spectral-shooter/index.html", site: "https://js13kgames.com/entries/spectral-shooter" },
     { title: "Tic Tac Woe", info: "The aim, to get three red toruses in line, either horizontally, vertically, diagonally 2d or diagonally 3D", url: "https://js13kgames.com/games/tic-tac-woe/index.html", site: "https://js13kgames.com/entries/tic-tac-woe" },
     { title: "The Last Tear", info: "Puddle has been through a tough time these days. He has recently lost his best friend Deave in a flight accident. After a few days of crying and mourning, he goes to his friend's grave to say goodbye to him one last time...", url: "https://js13kgames.com/games/the-last-tear/index.html", site: "https://js13kgames.com/entries/the-last-tear" },
@@ -65,7 +65,7 @@ function srcChanger(item) {
     document.getElementById("game").src = (list[random].url);
     document.getElementById("title").innerText = (list[random].title);
     document.getElementById("info").innerText = (list[random].info);
-    document.getElementById("site").innerText = ("visit the original site for more information");
+    document.getElementById("site").innerText = ("click here to for more information");
     document.getElementById("site").href = (list[random].site);
 
     // checks if its likebutton active from before 
@@ -85,6 +85,25 @@ function likeButton() {
     }
 
 }
+
+function lightSwitch() {
+    if (switchgithub.style.backgroundColor == "white") {
+        about.style.color = ""
+        switchgithub.style.backgroundColor = ""
+        about.style.backgroundColor = ""
+        github.style.backgroundColor = ""
+        github.style.border = ""
+        github.style.width = ""
+    } else {
+        about.style.color = "black"
+        switchgithub.style.backgroundColor = "white"
+        about.style.backgroundColor = "white"
+        github.style.backgroundColor = "#6a1492"
+        github.style.border = "#6a1492 solid 4px"
+        github.style.width = "60px"
+    }
+}
+
 
 //adds all the list links so u can choose manually which games u want to be displayed  
 function linkback() {
