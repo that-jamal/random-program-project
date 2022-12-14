@@ -94,6 +94,7 @@ function lightSwitch() {
         github.style.backgroundColor = ""
         github.style.border = ""
         github.style.width = ""
+        s2.style.backgroundColor = ""
     } else {
         about.style.color = "black"
         switchgithub.style.backgroundColor = "white"
@@ -101,6 +102,7 @@ function lightSwitch() {
         github.style.backgroundColor = "#6a1492"
         github.style.border = "#6a1492 solid 4px"
         github.style.width = "60px"
+        s2.style.backgroundColor = "white"
     }
 }
 
