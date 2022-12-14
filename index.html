@@ -17,13 +17,22 @@
 <body>
         <section id="s1">
                 <main>
+
                         <div id="center">
-                                <iframe id="game"
+                                <div id="middle">
+                                        <div onclick="likeButton()" id="likeButton"><img
+                                                        src="https://api.iconify.design/line-md:thumbs-up.svg?color=%23ffffff"
+                                                        alt="like" width="50px"></div>
+
+                                        <div id="zoom" onclick="openFullscreen();"><img id="zoomicon"
+                                                        src="https://api.iconify.design/ion:arrow-expand.svg?color=%23ffffff"
+                                                        alt="zoom in icon"></div>
+                                </div>
+                                <iframe id="game" class="frame"
                                         src="https://api.iconify.design/line-md:loading-alt-loop.svg?color=%23ffffff">
+
                                 </iframe>
-                                <div onclick="likeButton()" id="likeButton"><img
-                                                src="https://api.iconify.design/line-md:thumbs-up.svg?color=%23ffffff"
-                                                alt="like" width="50px"></div>
+
 
                                 <div class="btn-group dropstart" id="dropdown">
                                         <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split"
@@ -36,6 +45,7 @@
                                         <button onclick="srcChanger()" id="button" type="button" class="btn btn-dark">
                                                 Next
                                         </button>
+
                                 </div>
 
                         </div>
