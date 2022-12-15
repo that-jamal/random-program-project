@@ -61,7 +61,7 @@ function srcChanger(item) {
     }
 
     //adds the iformation from the list to program 
-    document.getElementById("likeButton").style.backgroundColor = "black"
+    document.getElementById("likeButton").style.backgroundColor = "#212529"
     document.getElementById("game").src = (list[random].url);
     document.getElementById("title").innerText = (list[random].title);
     document.getElementById("info").innerText = (list[random].info);
@@ -77,7 +77,7 @@ function srcChanger(item) {
 // changes the color of the like button and checks if its liked from before 
 function likeButton() {
     if (list[random].like) {
-        colorLike.style.backgroundColor = "black"
+        colorLike.style.backgroundColor = "#212529"
         list[random].like = false
     } else {
         colorLike.style.backgroundColor = "green"
@@ -86,6 +86,7 @@ function likeButton() {
 
 }
 
+// dark mode switch
 function lightSwitch() {
     if (switchgithub.style.backgroundColor == "white") {
         about.style.color = ""
@@ -106,8 +107,7 @@ function lightSwitch() {
     }
 }
 
-
-//adds all the list links so u can choose manually which games u want to be displayed  
+//adds all the list links so u can choose manually which games u want to play  
 function linkback() {
     // Generate 24 li element
     for (let i = 1; i < list.length; i++) {
@@ -123,7 +123,9 @@ function linkback() {
     }
 }
 
-var elem = document.getElementById("game");
+//zoom function;so that u can zoom in on the game while playing
+//source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_fullscreen
+let elem = document.getElementById("game");
 function openFullscreen() {
     if (elem.requestFullscreen) {
         elem.requestFullscreen();
