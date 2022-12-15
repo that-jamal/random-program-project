@@ -117,6 +117,7 @@ li:hover {
     justify-content: end;
 }
 
+/*helps the palcements of the likebutton and zoom button*/
 #middle {
     width: 100vw;
     height: 100vh;
