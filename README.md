@@ -7,3 +7,4 @@ The like button likes a game and keeps it liked until the user reload the page o
 The NEXT button disaplay's a random game in the frame.
 The arrow close to the NEXT button is a list that the user can use to pick what game will be displayd in the frame without getting a random one.
 The zoom/fullscreen button to the left down is used to zoom in on the current displayed game in the frame. (Note some games glitch out and wont work when zoom is active, no reasons found.)
+Located underneath the frame straight down to the left there is a switch that controls if the page is set in dark mode or in light mode, to change setting flip the switch. 
