@@ -108,12 +108,12 @@ function lightSwitch() {
 }
 
 //adds all the list links so u can choose manually which games u want to play  
+//tobias lotto/bingo code (modified)
 function linkback() {
     // Generate 24 li element
     for (let i = 1; i < list.length; i++) {
         const li = document.createElement("li"); // <li></li>
         li.id = i;
-        // i = number så at den vet vilken list title functionen använder
         li.innerText = (list[i].title)
         li.onclick = function () {
             srcChanger(i);
